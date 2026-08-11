@@ -1,0 +1,7 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Map Grid/Globe Background -->
+  <circle cx="35" cy="35" r="28" stroke="#d92525" stroke-width="3" stroke-dasharray="4 4" fill="none"/>
+  <!-- Location Pin -->
+  <path d="M35 12C26.1634 12 19 19.1634 19 28C19 39 35 58 35 58C35 58 51 39 51 28C51 19.1634 43.8366 12 35 12Z" fill="#d92525"/>
+  <circle cx="35" cy="27" r="7" fill="#FFFFFF"/>
+</svg>

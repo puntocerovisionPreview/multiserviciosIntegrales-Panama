@@ -1,0 +1,10 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Calendar Base -->
+  <rect x="8" y="14" width="54" height="48" rx="6" stroke="#d92525" stroke-width="4" fill="none"/>
+  <path d="M8 26H62" stroke="#d92525" stroke-width="4"/>
+  <path d="M22 8V18" stroke="#d92525" stroke-width="4" stroke-linecap="round"/>
+  <path d="M48 8V18" stroke="#d92525" stroke-width="4" stroke-linecap="round"/>
+  <!-- Verified Check / Star Award inside -->
+  <circle cx="35" cy="44" r="12" fill="#d92525"/>
+  <path d="M29 44L33 48L41 40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
