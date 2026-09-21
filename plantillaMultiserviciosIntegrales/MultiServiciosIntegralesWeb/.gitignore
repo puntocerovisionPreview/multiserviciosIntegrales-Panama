@@ -1,0 +1,12 @@
+# Archivos temporales y backups
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Configuración del editor y del sistema
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.log
