@@ -62,14 +62,70 @@
             filter: grayscale(20%);
         }
 
-        /* Reducción de espacio excesivo entre secciones */
-        .section-padding {
-            padding: 60px 0 !important;
+        /* ===== Optimización de Diseño Responsivo para Móviles ===== */
+        @media (max-width: 767px) {
+
+            /* Títulos principales del Hero */
+            .hero-content h1 {
+                font-size: 24px !important;
+                line-height: 1.25 !important;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                margin-bottom: 15px !important;
+            }
+
+            /* Texto descriptivo del Hero */
+            .hero-text-11 {
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+                margin-top: 15px !important;
+            }
+
+            /* Botones y llamada a la acción del Hero */
+            .hero-button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .hero-button .theme-btn-main.style-2 {
+                padding: 6px 18px !important;
+                padding-right: 6px !important;
+            }
+
+            .hero-button .theme-btn-main.style-2 .theme-btn {
+                font-size: 13px !important;
+            }
+
+            .hero-button .phone-call {
+                font-size: 16px !important;
+            }
+
+            /* Evitar saltos de línea forzados en títulos secundarios */
+            .section-title h2 br,
+            .service-hover-item h3 br {
+                display: none;
+            }
+
+            /* Títulos H2 responsivos */
+            h2,
+            .section-title h2 {
+                font-size: 24px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Ajuste de contenedor de Visión/Misión en tarjetas pequeñas */
+            .about-box-item {
+                padding: 25px 20px !important;
+            }
         }
 
-        @media (max-width: 991px) {
-            .section-padding {
-                padding: 45px 0 !important;
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 20px !important;
+                line-height: 1.25 !important;
             }
         }
     </style>
@@ -81,7 +137,7 @@
     <div class="preloader">
         <div class="spinner-wrap">
             <div class="preloader-logo">
-                <img src="assets/img/preloader.svg" alt="" class="img-fluid">
+                <img src="assets/img/logo/logo.png" alt="" class="img-fluid">
             </div>
             <div class="spinner"></div>
         </div>
@@ -429,6 +485,11 @@
                                                 VALOR AGREGADO
                                             </a>
                                         </li>
+                                        <li class="nav-item wow fadeInUp" data-wow-delay=".6s">
+                                            <a href="#thumb3" data-bs-toggle="tab" class="nav-link">
+                                                NUESTRA ESTRATEGIA
+                                            </a>
+                                        </li>
                                     </ul>
                                     <div class="tab-content">
                                         <div id="thumb1" class="tab-pane fade active show" role="tabpanel">
@@ -460,679 +521,687 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div id="thumb3" class="tab-pane fade" role="tabpanel">
+                                            <div class="content">
+                                                <p>
+                                                    Las nuevas tendencias nos exigen tomar decisiones radicales y vanguardistas: el servicio es el punto decisivo al adquirir un bien o servicio. Multiservicios Integrales, S.A. ha creado nuevos conceptos orientados a motivar al consumidor, dedicando gran parte de nuestra labor a mejorar el nivel de satisfacción y brindar un valor agregado superior.
+                                                </p>
+                                                <h6>EXCELENCIA Y SERVICIO</h6>
+                                                <div class="icon-item d-flex align-items-center">
+                                                    <i class="fa-solid fa-chart-line text-danger fs-1 me-3"></i>
+                                                    <h2><span class="count text-danger">100</span>%</h2>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Director General Section (Fondo Blanco Corporativo) -->
-                <section class="our-impact-section-3 section-padding fix bg-white">
-                    <div class="container">
-                        <div class="section-title-area">
-                            <div class="count-box bg-light border">
-                                <div class="icon mb-2 fs-1 text-danger">
-                                    <i class="fa-solid fa-award"></i>
-                                </div>
-                                <h2 class="text-dark"><span class="count text-danger">19</span>+</h2>
-                                <p class="text-secondary">
-                                    AÑOS DE EXCELENCIA <br> EN CONSTRUCCIÓN
-                                </p>
+            <!-- Director General Section (Fondo Blanco Corporativo) -->
+            <section class="our-impact-section-3 section-padding fix bg-white">
+                <div class="container">
+                    <div class="section-title-area">
+
+                        <div class="section-title mb-0">
+                            <span class="sub-title text-danger fw-bold wow fadeInUp">
+                                MENSAJE DE LA DIRECCIÓN GENERAL
+                            </span>
+                            <h2 class="text-dark tx-title sec_title tz-itm-title tz-itm-anim">
+                                "El servicio es la piedra angular <br> para hacer la diferencia"
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row g-4 mt-2">
+                        <div class="col-lg-12">
+                            <div class="p-4 rounded bg-light text-dark border border-1 shadow-sm">
+                                <blockquote class="blockquote mb-0 fs-5 italic">
+                                    <p class="mb-3 text-secondary">"Conscientes de que el servicio es la piedra
+                                        angular para hacer la diferencia entre las organizaciones que realizan
+                                        actividades similares, dedicamos gran parte de nuestro esfuerzo en mejorar
+                                        los procesos y el nivel de nuestro personal, en miras de brindar valores
+                                        agregados que excedan las expectativas."</p>
+                                    <footer class="blockquote-footer text-danger fw-bold mt-2">Arnulfo Domínguez
+                                        Polanco <cite title="Director General" class="text-secondary">— Director
+                                            General, Multiservicios Integrales, S.A.</cite></footer>
+                                </blockquote>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Counter Section (Exacto a about.html - 4 items en fila) -->
+            <div class="feature-counter-wrapper-inner section-padding">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="feature-box-items">
+                                <h2><span class="count">19</span>+</h2>
+                                <p>Años de Trayectoria en Panamá</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="feature-box-items">
+                                <h2><span class="count">3</span></h2>
+                                <p>Divisiones Técnicas Especializadas</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="feature-box-items">
+                                <h2><span class="count">6</span></h2>
+                                <p>Sectores de Cobertura Nacional</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="feature-box-items">
+                                <h2><span class="count">100</span>%</h2>
+                                <p>Flota Rodante e Infraestructura Propia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service-section Start -->
+            <section id="servicios" class="service-section section-padding fix bg-color-3">
+                <div class="container">
+                    <div class="service-top-item">
+                        <div class="section-title mb-0">
+                            <span class="sub-title wow fadeInUp">
+                                DIVISIONES ESPECIALIZADAS
+                            </span>
+                        </div>
+                        <div class="service-right">
                             <div class="section-title mb-0">
-                                <span class="sub-title text-danger fw-bold wow fadeInUp">
-                                    MENSAJE DE LA DIRECCIÓN GENERAL
-                                </span>
-                                <h2 class="text-dark tx-title sec_title tz-itm-title tz-itm-anim">
-                                    "El servicio es la piedra angular <br> para hacer la diferencia"
+                                <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
+                                    Nuestras 3 Áreas Técnicas <br> de Atención Integral
                                 </h2>
                             </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row g-4 mt-2">
-                            <div class="col-lg-12">
-                                <div class="p-4 rounded bg-light text-dark border border-1 shadow-sm">
-                                    <blockquote class="blockquote mb-0 fs-5 italic">
-                                        <p class="mb-3 text-secondary">"Conscientes de que el servicio es la piedra
-                                            angular para hacer la diferencia entre las organizaciones que realizan
-                                            actividades similares, dedicamos gran parte de nuestro esfuerzo en mejorar
-                                            los procesos y el nivel de nuestro personal, en miras de brindar valores
-                                            agregados que excedan las expectativas."</p>
-                                        <footer class="blockquote-footer text-danger fw-bold mt-2">Arnulfo Domínguez
-                                            Polanco <cite title="Director General" class="text-secondary">— Director
-                                                General, Multiservicios Integrales, S.A.</cite></footer>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-                <!-- Counter Section (Exacto a about.html - 4 items en fila) -->
-                <div class="feature-counter-wrapper-inner section-padding">
-                    <div class="container">
-                        <div class="row g-4">
-                            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="feature-box-items">
-                                    <h2><span class="count">19</span>+</h2>
-                                    <p>Años de Trayectoria en Panamá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-wrapper">
+                    <!-- División A: Construcción y Remodelaciones -->
+                    <div class="service-hover-item active wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-image">
+                            <img src="assets/img/home-1/service/servicio-construccion.png"
+                                alt="Construcción y Remodelaciones">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <img src="assets/img/home-1/icon/11.svg" alt="img">
                                 </div>
+                                <h3>
+                                    <a href="javascript:void(0)" data-msi-modal="modalServicioA">Construcción y <br>
+                                        Remodelaciones</a>
+                                </h3>
+                                <p>
+                                    Soluciones integrales de construcción para el sector comercial, industrial,
+                                    hospitalario y residencial institucional.
+                                </p>
+                                <button type="button" class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
+                                    data-msi-modal="modalServicioA">
+                                    <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
+                                </button>
+
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="feature-box-items">
-                                    <h2><span class="count">3</span></h2>
-                                    <p>Divisiones Técnicas Especializadas</p>
+                        </div>
+                    </div>
+
+                    <!-- División B: División Energética -->
+                    <div class="service-hover-item wow fadeInUp" data-wow-delay=".4s">
+                        <div class="service-image">
+                            <img src="assets/img/home-1/service/servicio-energetica.png" alt="División Energética">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <img src="assets/img/home-1/icon/12.svg" alt="img">
                                 </div>
+                                <h3>
+                                    <a href="javascript:void(0)" data-msi-modal="modalServicioB">División <br>
+                                        Energética</a>
+                                </h3>
+                                <p>
+                                    Optimización y modernización de infraestructura eléctrica, HVAC, cableado
+                                    estructurado e iluminación LED.
+                                </p>
+                                <button type="button" class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
+                                    data-msi-modal="modalServicioB">
+                                    <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
+                                </button>
+
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                <div class="feature-box-items">
-                                    <h2><span class="count">6</span></h2>
-                                    <p>Sectores de Cobertura Nacional</p>
+                        </div>
+                    </div>
+
+                    <!-- División C: División de Infraestructura -->
+                    <div class="service-hover-item wow fadeInUp" data-wow-delay=".6s">
+                        <div class="service-image">
+                            <img src="assets/img/home-1/service/servicio-infraestructura.png"
+                                alt="División de Infraestructura">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <img src="assets/img/home-1/icon/13.svg" alt="img">
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                                <div class="feature-box-items">
-                                    <h2><span class="count">100</span>%</h2>
-                                    <p>Flota Rodante e Infraestructura Propia</p>
-                                </div>
+                                <h3>
+                                    <a href="javascript:void(0)" data-msi-modal="modalServicioC">División de <br>
+                                        Infraestructura</a>
+                                </h3>
+                                <p>
+                                    Desarrollo de obras civiles pesadas, movimiento de tierras, excavaciones y
+                                    soterramiento de líneas.
+                                </p>
+                                <button type="button" class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
+                                    data-msi-modal="modalServicioC">
+                                    <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
+                                </button>
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Service-section Start -->
-                <section id="servicios" class="service-section section-padding fix bg-color-3">
-                    <div class="container">
-                        <div class="service-top-item">
-                            <div class="section-title mb-0">
-                                <span class="sub-title wow fadeInUp">
-                                    DIVISIONES ESPECIALIZADAS
-                                </span>
-                            </div>
-                            <div class="service-right">
-                                <div class="section-title mb-0">
-                                    <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
-                                        Nuestras 3 Áreas Técnicas <br> de Atención Integral
-                                    </h2>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-wrapper">
-                        <!-- División A: Construcción y Remodelaciones -->
-                        <div class="service-hover-item active wow fadeInUp" data-wow-delay=".2s">
-                            <div class="service-image">
-                                <img src="assets/img/home-1/service/servicio-construccion.png"
-                                    alt="Construcción y Remodelaciones">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src="assets/img/home-1/icon/11.svg" alt="img">
-                                    </div>
-                                    <h3>
-                                        <a href="javascript:void(0)" data-msi-modal="modalServicioA">Construcción y <br>
-                                            Remodelaciones</a>
-                                    </h3>
-                                    <p>
-                                        Soluciones integrales de construcción para el sector comercial, industrial,
-                                        hospitalario y residencial institucional.
-                                    </p>
-                                    <button type="button"
-                                        class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
-                                        data-msi-modal="modalServicioA">
-                                        <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- División B: División Energética -->
-                        <div class="service-hover-item wow fadeInUp" data-wow-delay=".4s">
-                            <div class="service-image">
-                                <img src="assets/img/home-1/service/servicio-energetica.png" alt="División Energética">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src="assets/img/home-1/icon/12.svg" alt="img">
-                                    </div>
-                                    <h3>
-                                        <a href="javascript:void(0)" data-msi-modal="modalServicioB">División <br>
-                                            Energética</a>
-                                    </h3>
-                                    <p>
-                                        Optimización y modernización de infraestructura eléctrica, HVAC, cableado
-                                        estructurado e iluminación LED.
-                                    </p>
-                                    <button type="button"
-                                        class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
-                                        data-msi-modal="modalServicioB">
-                                        <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- División C: División de Infraestructura -->
-                        <div class="service-hover-item wow fadeInUp" data-wow-delay=".6s">
-                            <div class="service-image">
-                                <img src="assets/img/home-1/service/servicio-infraestructura.png"
-                                    alt="División de Infraestructura">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src="assets/img/home-1/icon/13.svg" alt="img">
-                                    </div>
-                                    <h3>
-                                        <a href="javascript:void(0)" data-msi-modal="modalServicioC">División de <br>
-                                            Infraestructura</a>
-                                    </h3>
-                                    <p>
-                                        Desarrollo de obras civiles pesadas, movimiento de tierras, excavaciones y
-                                        soterramiento de líneas.
-                                    </p>
-                                    <button type="button"
-                                        class="btn btn-danger btn-sm text-white mt-3 fw-bold shadow-sm"
-                                        data-msi-modal="modalServicioC">
-                                        <i class="fa-solid fa-circle-info me-1"></i> VER DETALLES
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Feature-section Start -->
-                <!-- Feature-section Start -->
-                <section class="feature-section section-padding fix bg-light">
-                    <div class="top-shape float-bob-x">
-                        <img src="assets/img/home-1/feature/shape.png" alt="img">
-                    </div>
-                    <div class="container">
-                        <div class="section-title text-center mb-5">
-                            <span class="sub-title wow fadeInUp">
-                                RESPALDO E INFRAESTRUCTURA PROPIA
-                            </span>
-                            <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
-                                Equipamiento de Vanguardia <br> y Solidez Operativa
-                            </h2>
-                            <p class="mt-3 text-secondary max-w-800 mx-auto">
-                                Garantizamos la ejecución ininterrumpida de proyectos sin depender de terceros, contando
-                                con recursos propios y cobertura completa de responsabilidad civil.
-                            </p>
-                        </div>
-
-                        <div class="row g-4">
-                            <!-- 1. Sede Operativa -->
-                            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
-                                    <div class="icon mb-3 fs-1 text-danger">
-                                        <i class="fa-solid fa-landmark"></i>
-                                    </div>
-                                    <h4 class="fw-bold mb-2 text-dark">Sede Operativa</h4>
-                                    <p class="text-secondary small mb-0">
-                                        Instalaciones propias en Villa Cáceres con talleres de soporte y centro de
-                                        despacho.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- 2. Flota Rodante -->
-                            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
-                                    <div class="icon mb-3 fs-1 text-danger">
-                                        <i class="fa-solid fa-truck-moving"></i>
-                                    </div>
-                                    <h4 class="fw-bold mb-2 text-dark">Flota Rodante</h4>
-                                    <p class="text-secondary small mb-0">
-                                        Camiones de diversos tonelajes y volquetes propios para logística
-                                        ininterrumpida.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- 3. Maquinaria Pesada -->
-                            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
-                                    <div class="icon mb-3 fs-1 text-danger">
-                                        <i class="fa-solid fa-truck-front"></i>
-                                    </div>
-                                    <h4 class="fw-bold mb-2 text-dark">Maquinaria Pesada</h4>
-                                    <p class="text-secondary small mb-0">
-                                        Telehandler CAT, camiones grúa y plataformas de elevación especializadas.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- 4. Póliza y Seguro RC -->
-                            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                                <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
-                                    <div class="icon mb-3 fs-1 text-danger">
-                                        <i class="fa-solid fa-award"></i>
-                                    </div>
-                                    <h4 class="fw-bold mb-2 text-dark">Póliza y Seguro RC</h4>
-                                    <p class="text-secondary small mb-0">
-                                        Resguardo completo mediante seguro de responsabilidad civil en cada obra
-                                        ejecutada.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- Capacidad y Experiencia Section Start -->
-                <section id="experiencia" class="project-section section-padding fix bg-white">
-                    <div class="container">
-                        <div class="section-title text-center mb-5">
-                            <span class="sub-title wow fadeInUp">CAPACIDAD Y EXPERIENCIA</span>
-                            <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">Sectores de Atencion y Cobertura
-                                Nacional</h2>
-                            <p class="mt-3 fs-5 text-secondary max-w-800 mx-auto">
-                                Multiservicios Integrales, S.A. posee un historial comprobado de respuesta técnica,
-                                capacidad financiera e infraestructura propia para la ejecución de proyectos de alta
-                                exigencia en el territorio panameño.
-                            </p>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-building-columns"></i>
-                                    </div>
-                                    <h4>Sector Gubernamental</h4>
-                                    <p class="text-secondary mt-2">Construcción y remodelación de sedes institucionales,
-                                        obras civiles públicas y mantenimientos de alta escala.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-store"></i></div>
-                                    <h4>Sector Comercial y Retail</h4>
-                                    <p class="text-secondary mt-2">Adecuación de locales comerciales, plazas, tiendas de
-                                        marcas multinacionales y espacios corporativos.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-hospital"></i></div>
-                                    <h4>Sector Salud y Hospitalario</h4>
-                                    <p class="text-secondary mt-2">Infraestructura médica, laboratorios de alta
-                                        complejidad,
-                                        climatización especializada e instalaciones asépticas.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                    <h4 style="font-family: inherit;">Sector Educativo</h4>
-                                    <p class="text-secondary mt-2">Infraestructura para planteles escolares, campus
-                                        universitarios, talleres de formación e institutos de investigación.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-vault"></i></div>
-                                    <h4>Sector Bancario y Financiero</h4>
-                                    <p class="text-secondary mt-2">Remodelación de sucursales bancarias, áreas de
-                                        atención
-                                        al cliente y centros de datos de alta seguridad.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                <div class="p-4 rounded border bg-light h-100 shadow-sm">
-                                    <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-bolt"></i></div>
-                                    <h4>Sector Infraestructura y Energía</h4>
-                                    <p class="text-secondary mt-2">Movimiento de tierras, excavaciones, canalizaciones
-                                        masivas y soterramiento de líneas de distribución eléctrica.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Banner de Clientes / Organismos Atendidos (Slider Movimiento Continuo Gigante) -->
-                        <div class="mt-5 pt-4 border-top">
-                            <div class="text-center mb-4">
-                                <h4 class="text-dark fw-bold text-uppercase tracking-wider">Empresas e Instituciones con
-                                    las
-                                    que hemos colaborado</h4>
-                            </div>
-                            <div class="swiper big-brand-slider py-4">
-                                <div class="swiper-wrapper align-items-center">
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/sony.png" alt="Sony"
-                                            style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/inditex.png" alt="Inditex"
-                                            style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/zara.png" alt="Zara"
-                                            style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/massimoDutti.png" alt="Massimo Dutti"
-                                            style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/pullandbear.png" alt="Pull & Bear"
-                                            style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/stradivarius.png" alt="Stradivarius"
-                                            style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/fccConstruccion.png" alt="FCC Construcción"
-                                            style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/cableOnda.png" alt="Cable Onda"
-                                            style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/bancoPanama.png" alt="Banco Nacional de Panamá"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/aereopuertoPanama.png"
-                                            alt="Aeropuerto Internacional de Tocumen"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/miviot.png" alt="MIVIOT"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/zonalibredecolon.png" alt="Zona Libre de Colón"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/inadeh.png" alt="INADEH"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/uip.png"
-                                            alt="Universidad Interamericana de Panamá"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                    <div class="swiper-slide text-center px-4">
-                                        <img src="assets/img/clientes/novey.png" alt="Geo F. Novey"
-                                            style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                if (typeof Swiper !== "undefined") {
-                                    new Swiper(".big-brand-slider", {
-                                        centeredSlides: true,
-                                        watchSlidesProgress: true,
-                                        spaceBetween: 60,
-                                        speed: 700,
-                                        loop: true,
-                                        autoplay: {
-                                            delay: 2000,
-                                            disableOnInteraction: false,
-                                        },
-                                        breakpoints: {
-                                            1200: { slidesPerView: 5 },
-                                            992: { slidesPerView: 3 },
-                                            768: { slidesPerView: 3 },
-                                            0: { slidesPerView: 1 }
-                                        }
-                                    });
-                                }
-                            });
-                        </script>
-                    </div>
-                </section>
-
-
-
-
-
-                <!-- Contact-section Start -->
-                <section id="contacto" class="contact-section-inner section-padding fix bg-color-3 pb-0">
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-xl-5 col-lg-6 wow fadeInUp">
-                                <div class="contact-left-image-inner fix">
-                                    <img data-speed=".8" src="assets/img/inner-page/contact/contact-01.jpg" alt="img">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-lg-6">
-                                <div class="contact-right-items-inner">
-                                    <div class="section-title">
-                                        <span class="sub-title wow fadeInUp">
-                                            CONTÁCTENOS
-                                        </span>
-                                        <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                                            Asesoría Especializada y Cotización
-                                        </h2>
-                                    </div>
-                                    <ul class="contact-information-list">
-                                        <li class="wow fadeInUp" data-wow-delay=".6s">
-                                            <div class="icon">
-                                                <img src="assets/img/inner-page/contact/icon-01.svg" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <h5>Contacto Directo:</h5>
-                                                <p><a href="tel:+5072362415">Teléfono: (507) 236-2415 / 236-2504</a></p>
-                                                <p><a href="mailto:arnulfo@multiservint.com">Enviar Correo:
-                                                        arnulfo@multiservint.com</a></p>
-                                            </div>
-                                        </li>
-                                        <li class="wow fadeInUp" data-wow-delay=".8s">
-                                            <div class="icon">
-                                                <img src="assets/img/inner-page/contact/icon-02.svg" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <h5>Nuestra Ubicación:</h5>
-                                                <p>Villa Cáceres, Calle 76, Oficina 113, <span class="d-block">Ciudad de
-                                                        Panamá, Panamá</span></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="contact-content-style-7">
-                                        <form action="#" id="contact-form1" method="POST" class="contact-form-items">
-                                            <div class="row g-4">
-                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                                    <div class="form-clt">
-                                                        <input type="text" name="name"
-                                                            placeholder="Su Nombre y Apellido *" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                                    <div class="form-clt">
-                                                        <input type="email" name="email"
-                                                            placeholder="Correo Electrónico *" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
-                                                    <div class="form-clt">
-                                                        <input type="text" name="phone"
-                                                            placeholder="Número de Teléfono *" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
-                                                    <div class="form-clt">
-                                                        <input type="text" name="company"
-                                                            placeholder="Nombre de la Empresa / Organización">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
-                                                    <div class="form-clt">
-                                                        <textarea name="message"
-                                                            placeholder="Escriba aquí los detalles de su proyecto o mensaje... *"
-                                                            required></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
-                                                    <button type="submit" class="theme-btn-main style-2">
-                                                        <span class="theme-btn-arrow-left"> <i
-                                                                class="fa-solid fa-arrow-up-right"></i> </span>
-                                                        <span class="theme-btn">SOLICITAR COTIZACIÓN O CITA</span>
-                                                        <span class="theme-btn-arrow-right"> <i
-                                                                class="fa-solid fa-arrow-up-right"></i> </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-bottom-items-inner section-padding">
-                            <div class="info-items wow fadeInUp" data-wow-delay=".2s">
-                                <div class="icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="content">
-                                    <h5>Envíenos un Correo</h5>
-                                    <h6><a href="mailto:arnulfo@multiservint.com">arnulfo@multiservint.com</a></h6>
-                                </div>
-                            </div>
-                            <div class="info-items wow fadeInUp" data-wow-delay=".4s">
-                                <div class="icon">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="content">
-                                    <h5>Llámenos</h5>
-                                    <h6><a href="tel:+5072362415">(507) 236-2415 / 236-2504</a></h6>
-                                </div>
-                            </div>
-                            <div class="info-items wow fadeInUp" data-wow-delay=".6s">
-                                <div class="icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="content">
-                                    <h5>Ubicación</h5>
-                                    <h6>Villa Cáceres, Calle 76, Ofic. 113</h6>
-                                </div>
-                            </div>
-                            <div class="info-items border-none wow fadeInUp" data-wow-delay=".8s">
-                                <div class="icon">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <div class="content">
-                                    <h5>Horario de Atención</h5>
-                                    <h6>Lun - Vie: 08:00 AM - 05:00 PM</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Contact Map Start -->
-                <div class="google-map-items">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.610665985023!2d-79.5444855!3d9.0035041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f47585f67b848c7%3A0xa646279f64db2a7d!2sVilla%20C%C3%A1ceres%2C%20Panam%C3%A1!5e0!3m2!1ses!2spa!4v1700000000000!5m2!1ses!2spa"
-                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!-- Feature-section Start -->
+            <!-- Feature-section Start -->
+            <section class="feature-section section-padding fix bg-light">
+                <div class="top-shape float-bob-x">
+                    <img src="assets/img/home-1/feature/shape.png" alt="img">
                 </div>
+                <div class="container">
+                    <div class="section-title text-center mb-5">
+                        <span class="sub-title wow fadeInUp">
+                            RESPALDO E INFRAESTRUCTURA PROPIA
+                        </span>
+                        <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
+                            Equipamiento de Vanguardia <br> y Solidez Operativa
+                        </h2>
+                        <p class="mt-3 text-secondary max-w-800 mx-auto">
+                            Garantizamos la ejecución ininterrumpida de proyectos sin depender de terceros, contando
+                            con recursos propios y cobertura completa de responsabilidad civil.
+                        </p>
+                    </div>
 
-                <!-- Footer-section Start -->
-                <footer class="footer-section footer-bg fix">
-                    <div class="right-shape float-bob-x">
-                        <img src="assets/img/home-1/shape-1.png" alt="img">
-                    </div>
-                    <div class="left-shape">
-                        <img src="assets/img/home-1/shape-2.png" alt="img">
-                    </div>
-                    <div class="container">
-                        <div class="footer-wrapper">
-                            <div class="footer-newsletter">
-                                <div class="content wow fadeInUp" data-wow-delay=".3s">
-                                    <a href="#inicio">
-                                        <img src="assets/img/logo/logo.png" alt="img">
-                                    </a>
-                                    <p>
-                                        Multiservicios Integrales, S.A. — 19 años de excelencia, solidez y respaldo
-                                        operativo en construcción, remodelación e infraestructura en Panamá.
-                                    </p>
-                                </div>
-                                <div class="newsletter-content wow fadeInUp" data-wow-delay=".5s">
-                                    <h4>Sede Operativa</h4>
-                                    <p class="text-white">Villa Cáceres, Calle 76, Oficina 113, Ciudad de Panamá</p>
-                                    <p class="text-white">Apartado Postal: 0819-05475</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="single-footer-widget">
-                                        <div class="footer-contact">
-                                            <h4>
-                                                <a href="mailto:arnulfo@multiservint.com">arnulfo@multiservint.com</a>
-                                            </h4>
-                                            <h4 class="mb-0">
-                                                <a href="tel:+5072362415">(507) 236-2415 / 236-2504</a>
-                                            </h4>
-                                        </div>
+                    <!-- Imagen de Destacado de Flota y Maquinaria Propia -->
+                    <div class="row mb-5 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="col-12">
+                            <div class="position-relative overflow-hidden rounded-4 shadow-lg border border-2 border-white">
+                                <img src="assets/img/flota/1.png" alt="Flota de Equipos y Maquinaria Propia de Multiservicios Integrales S.A." class="img-fluid w-100 object-fit-cover" style="max-height: 480px;">
+                                <div class="position-absolute bottom-0 start-0 w-100 p-4 bg-dark bg-opacity-75 text-white d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div>
+                                        <h4 class="text-white fw-bold mb-1"><i class="fa-solid fa-truck-monster text-danger me-2"></i>Flota Vehicular y Equipos de Elevación Propia</h4>
+                                        <p class="text-white-50 mb-0 small">Infraestructura lista y disponible para proyectos comerciales, gubernamentales e industriales en Panamá</p>
                                     </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                    <div class="single-footer-widget">
-                                        <div class="widget-title">
-                                            <h4>Navegación</h4>
-                                        </div>
-                                        <ul class="list-area">
-                                            <li>
-                                                <a href="#inicio">
-                                                    Inicio
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#nosotros">
-                                                    Nosotros
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#servicios">
-                                                    Servicios
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#experiencia">
-                                                    Experiencia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#contacto">
-                                                    Contacto
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 ps-lg-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                                    <div class="single-footer-widget">
-                                        <div class="map-items">
-                                            <div class="googpemap">
-                                                <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.084474441445!2d-79.5255!3d9.0083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f47587bc9e05f63%3A0x1d66824bd10abeb2!2sVilla%20C%C3%A1ceres%2C%20Panam%C3%A1!5e0!3m2!1ses!2spa!4v1641984054261!5m2!1ses!2spa"
-                                                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span class="badge bg-danger fs-6 px-3 py-2 fw-semibold">100% EQUIPAMIENTO PROPIO</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer-bottom">
-                        <div class="container">
-                            <div class="footer-wrapper">
-                                <p class="wow fadeInUp" data-wow-delay=".3s">
-                                    Copyright © 2026 Multiservicios Integrales, S.A. Todos los derechos reservados.
+
+                    <div class="row g-4">
+                        <!-- 1. Sede Operativa -->
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
+                                <div class="icon mb-3 fs-1 text-danger">
+                                    <i class="fa-solid fa-landmark"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Sede Operativa</h4>
+                                <p class="text-secondary small mb-0">
+                                    Instalaciones propias en Villa Cáceres con talleres de soporte y centro de
+                                    despacho.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Flota Rodante -->
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
+                                <div class="icon mb-3 fs-1 text-danger">
+                                    <i class="fa-solid fa-truck-moving"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Flota Rodante</h4>
+                                <p class="text-secondary small mb-0">
+                                    Camiones de diversos tonelajes y volquetes propios para logística
+                                    ininterrumpida.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Maquinaria Pesada -->
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
+                                <div class="icon mb-3 fs-1 text-danger">
+                                    <i class="fa-solid fa-truck-front"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Maquinaria Pesada</h4>
+                                <p class="text-secondary small mb-0">
+                                    Telehandler CAT, camiones grúa y plataformas de elevación especializadas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Póliza y Seguro RC -->
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="p-4 bg-white rounded-3 border border-1 shadow-sm h-100 text-center">
+                                <div class="icon mb-3 fs-1 text-danger">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Póliza y Seguro RC</h4>
+                                <p class="text-secondary small mb-0">
+                                    Resguardo completo mediante seguro de responsabilidad civil en cada obra
+                                    ejecutada.
                                 </p>
                             </div>
                         </div>
                     </div>
-                </footer>
+                </div>
+            </section>
+
+
+            <!-- Capacidad y Experiencia Section Start -->
+            <section id="experiencia" class="project-section section-padding fix bg-white">
+                <div class="container">
+                    <div class="section-title text-center mb-5">
+                        <span class="sub-title wow fadeInUp">CAPACIDAD Y EXPERIENCIA</span>
+                        <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">Sectores de Atencion y Cobertura
+                            Nacional</h2>
+                        <p class="mt-3 fs-5 text-secondary max-w-800 mx-auto">
+                            Multiservicios Integrales, S.A. posee un historial comprobado de respuesta técnica,
+                            capacidad financiera e infraestructura propia para la ejecución de proyectos de alta
+                            exigencia en el territorio panameño.
+                        </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-building-columns"></i>
+                                </div>
+                                <h4>Sector Gubernamental</h4>
+                                <p class="text-secondary mt-2">Construcción y remodelación de sedes institucionales,
+                                    obras civiles públicas y mantenimientos de alta escala.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-store"></i></div>
+                                <h4>Sector Comercial y Retail</h4>
+                                <p class="text-secondary mt-2">Adecuación de locales comerciales, plazas, tiendas de
+                                    marcas multinacionales y espacios corporativos.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-hospital"></i></div>
+                                <h4>Sector Salud y Hospitalario</h4>
+                                <p class="text-secondary mt-2">Infraestructura médica, laboratorios de alta
+                                    complejidad,
+                                    climatización especializada e instalaciones asépticas.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <h4 style="font-family: inherit;">Sector Educativo</h4>
+                                <p class="text-secondary mt-2">Infraestructura para planteles escolares, campus
+                                    universitarios, talleres de formación e institutos de investigación.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-vault"></i></div>
+                                <h4>Sector Bancario y Financiero</h4>
+                                <p class="text-secondary mt-2">Remodelación de sucursales bancarias, áreas de
+                                    atención
+                                    al cliente y centros de datos de alta seguridad.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="p-4 rounded border bg-light h-100 shadow-sm">
+                                <div class="icon mb-3 fs-2 text-danger"><i class="fa-solid fa-bolt"></i></div>
+                                <h4>Sector Infraestructura y Energía</h4>
+                                <p class="text-secondary mt-2">Movimiento de tierras, excavaciones, canalizaciones
+                                    masivas y soterramiento de líneas de distribución eléctrica.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banner de Clientes / Organismos Atendidos (Slider Movimiento Continuo Gigante) -->
+                    <div class="mt-5 pt-4 border-top">
+                        <div class="text-center mb-4">
+                            <h4 class="text-dark fw-bold text-uppercase tracking-wider">Empresas e Instituciones con
+                                las
+                                que hemos colaborado</h4>
+                        </div>
+                        <div class="swiper big-brand-slider py-4">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/sony.png" alt="Sony"
+                                        style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/inditex.png" alt="Inditex"
+                                        style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/zara.png" alt="Zara"
+                                        style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/massimoDutti.png" alt="Massimo Dutti"
+                                        style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/pullandbear.png" alt="Pull & Bear"
+                                        style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/stradivarius.png" alt="Stradivarius"
+                                        style="height: 130px; max-height: 140px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/fccConstruccion.png" alt="FCC Construcción"
+                                        style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/cableOnda.png" alt="Cable Onda"
+                                        style="height: 140px; max-height: 150px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/bancoPanama.png" alt="Banco Nacional de Panamá"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/aereopuertoPanama.png"
+                                        alt="Aeropuerto Internacional de Tocumen"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/miviot.png" alt="MIVIOT"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/zonalibredecolon.png" alt="Zona Libre de Colón"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/inadeh.png" alt="INADEH"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/uip.png" alt="Universidad Interamericana de Panamá"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="swiper-slide text-center px-4">
+                                    <img src="assets/img/clientes/novey.png" alt="Geo F. Novey"
+                                        style="height: 145px; max-height: 155px; width: auto; max-width: 100%; object-fit: contain;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            if (typeof Swiper !== "undefined") {
+                                new Swiper(".big-brand-slider", {
+                                    centeredSlides: true,
+                                    watchSlidesProgress: true,
+                                    spaceBetween: 60,
+                                    speed: 700,
+                                    loop: true,
+                                    autoplay: {
+                                        delay: 2000,
+                                        disableOnInteraction: false,
+                                    },
+                                    breakpoints: {
+                                        1200: { slidesPerView: 5 },
+                                        992: { slidesPerView: 3 },
+                                        768: { slidesPerView: 3 },
+                                        0: { slidesPerView: 1 }
+                                    }
+                                });
+                            }
+                        });
+                    </script>
+                </div>
+            </section>
+
+
+
+
+
+            <!-- Contact-section Start -->
+            <section id="contacto" class="contact-section-inner fix bg-color-3 pb-0" style="padding: 60px 0;">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-xl-5 col-lg-6 wow fadeInUp">
+                            <div class="contact-left-image-inner fix">
+                                <img src="assets/img/footer/footer.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
+                            <div class="contact-right-items-inner">
+                                <div class="section-title">
+                                    <span class="sub-title wow fadeInUp">
+                                        CONTÁCTENOS
+                                    </span>
+                                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
+                                        Asesoría Especializada y Cotización
+                                    </h2>
+                                </div>
+                                <ul class="contact-information-list">
+                                    <li class="wow fadeInUp" data-wow-delay=".6s">
+                                        <div class="icon">
+                                            <img src="assets/img/inner-page/contact/icon-01.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Contacto Directo:</h5>
+                                            <p><a href="tel:+5072362415">Teléfono: (507) 236-2415 / 236-2504</a></p>
+                                            <p><a href="mailto:arnulfo@multiservint.com">Enviar Correo:
+                                                    arnulfo@multiservint.com</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="icon">
+                                            <img src="assets/img/inner-page/contact/icon-02.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Nuestra Ubicación:</h5>
+                                            <p>Villa Cáceres, Calle 76, Oficina 113, <span class="d-block">Ciudad de
+                                                    Panamá, Panamá</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="contact-content-style-7">
+                                    <form action="#" id="contact-form1" method="POST" class="contact-form-items">
+                                        <div class="row g-4">
+                                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                                <div class="form-clt">
+                                                    <input type="text" name="name" placeholder="Su Nombre y Apellido *"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                                <div class="form-clt">
+                                                    <input type="email" name="email" placeholder="Correo Electrónico *"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                                                <div class="form-clt">
+                                                    <input type="text" name="phone" placeholder="Número de Teléfono *"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                                                <div class="form-clt">
+                                                    <input type="text" name="company"
+                                                        placeholder="Nombre de la Empresa / Organización">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
+                                                <div class="form-clt">
+                                                    <textarea name="message"
+                                                        placeholder="Escriba aquí los detalles de su proyecto o mensaje... *"
+                                                        required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                                <button type="submit" class="theme-btn-main style-2">
+                                                    <span class="theme-btn-arrow-left"> <i
+                                                            class="fa-solid fa-arrow-up-right"></i> </span>
+                                                    <span class="theme-btn">SOLICITAR COTIZACIÓN O CITA</span>
+                                                    <span class="theme-btn-arrow-right"> <i
+                                                            class="fa-solid fa-arrow-up-right"></i> </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-bottom-items-inner section-padding">
+                        <div class="info-items wow fadeInUp" data-wow-delay=".2s">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Envíenos un Correo</h5>
+                                <h6><a href="mailto:arnulfo@multiservint.com">arnulfo@multiservint.com</a></h6>
+                            </div>
+                        </div>
+                        <div class="info-items wow fadeInUp" data-wow-delay=".4s">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Llámenos</h5>
+                                <h6><a href="tel:+5072362415">(507) 236-2415 / 236-2504</a></h6>
+                            </div>
+                        </div>
+                        <div class="info-items wow fadeInUp" data-wow-delay=".6s">
+                            <div class="icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Ubicación</h5>
+                                <h6>Villa Cáceres, Calle 76, Ofic. 113</h6>
+                            </div>
+                        </div>
+                        <div class="info-items border-none wow fadeInUp" data-wow-delay=".8s">
+                            <div class="icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Horario de Atención</h5>
+                                <h6>Lun - Vie: 08:00 AM - 05:00 PM</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Map Start -->
+            <div class="google-map-items">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.610665985023!2d-79.5444855!3d9.0035041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f47585f67b848c7%3A0xa646279f64db2a7d!2sVilla%20C%C3%A1ceres%2C%20Panam%C3%A1!5e0!3m2!1ses!2spa!4v1700000000000!5m2!1ses!2spa"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Footer-section Start (de index-5.html) -->
+            <footer class="footer-section-5 bg-cover" style="background-image: url(assets/img/footer/footer2.png);">
+                <div class="right-shape">
+                    <img src="assets/img/home-5/piler-2.png" alt="img">
+                </div>
+                <div class="container">
+                    <div class="footer-wrapper style-3">
+                        <div class="row g-4">
+                            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12 wow fadeInUp"
+                                data-wow-delay=".2s">
+                                <div class="single-footer-widget">
+                                    <div class="widget-title">
+                                        <h4>Sobre Nosotros</h4>
+                                    </div>
+                                    <div class="footer-contact">
+                                        <p>
+                                            Multiservicios Integrales, S.A. — 19 años de excelencia, solidez y respaldo
+                                            operativo en construcción, remodelación e infraestructura en Panamá.
+                                        </p>
+                                        <h5 class="text-white mt-3 mb-2">Sede Operativa</h5>
+                                        <p class="text-white mb-1"><i
+                                                class="fa-solid fa-location-dot me-2 text-danger"></i>Villa Cáceres,
+                                            Calle 76, Oficina 113, Ciudad de Panamá</p>
+                                        <p class="text-white"><i class="fa-solid fa-box me-2 text-danger"></i>Apartado
+                                            Postal: 0819-05475</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp"
+                                data-wow-delay=".4s">
+                                <div class="single-footer-widget">
+                                    <div class="widget-title">
+                                        <h4>Navegación</h4>
+                                    </div>
+                                    <ul class="list-area">
+                                        <li>
+                                            <a href="#inicio">Inicio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#nosotros">Nosotros</a>
+                                        </li>
+                                        <li>
+                                            <a href="#servicios">Servicios</a>
+                                        </li>
+                                        <li>
+                                            <a href="#experiencia">Experiencia</a>
+                                        </li>
+                                        <li>
+                                            <a href="#contacto">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp"
+                                data-wow-delay=".6s">
+                                <div class="single-footer-widget">
+                                    <div class="widget-title">
+                                        <h4>Contacto Directo</h4>
+                                    </div>
+                                    <div class="footer-contact">
+                                        <p class="text-white mb-2">
+                                            <i class="fa-solid fa-envelope me-2 text-danger"></i>
+                                            <a href="mailto:arnulfo@multiservint.com"
+                                                class="text-white">arnulfo@multiservint.com</a>
+                                        </p>
+                                        <p class="text-white">
+                                            <i class="fa-solid fa-phone me-2 text-danger"></i>
+                                            <a href="tel:+5072362415" class="text-white">(507) 236-2415 / 236-2504</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-5">
+                    <div class="container">
+                        <div class="footer-wrapper-5 justify-content-center text-center flex-column align-items-center">
+                            <a href="#inicio" class="d-inline-block mb-3">
+                                <img src="assets/img/logo/logo.png" alt="Multiservicios Integrales Logo" style="max-height: 50px;">
+                            </a>
+                            <p class="wow fadeInUp mb-0" data-wow-delay=".3s">
+                                Copyright © 2026 Multiservicios Integrales, S.A. Todos los derechos reservados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
         </div>
     </div>

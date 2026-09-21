@@ -1,0 +1,10 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Industrial Warehouse / Infrastructure Roof -->
+  <path d="M8 28L35 12L62 28V34H8V28Z" stroke="#d92525" stroke-width="3" fill="none"/>
+  <!-- Heavy Fleet Truck / Excavator Cabin -->
+  <rect x="12" y="34" width="46" height="20" rx="3" fill="#d92525"/>
+  <rect x="40" y="38" width="14" height="8" rx="2" fill="#FFFFFF"/>
+  <!-- Wheels -->
+  <circle cx="22" cy="56" r="6" fill="#d92525" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="48" cy="56" r="6" fill="#d92525" stroke="#FFFFFF" stroke-width="2"/>
+</svg>

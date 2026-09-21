@@ -147,12 +147,15 @@
 
     if($('.banner-active').length > 0) {
         const bannerActive = new Swiper(".banner-active", {
-            speed:1500,
+            speed: 0,
             loop: true,
             slidesPerView: 1,
-            effect:'fade',
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: false
+            },
             autoplay: {
-                delay: 3000,         
+                delay: 4000,         
                 disableOnInteraction: false,
                 pauseOnMouseEnter: false,  
             },
@@ -949,7 +952,7 @@
             wrapper: "#smooth-wrapper",
             content: "#smooth-content",
             smooth: 2,
-            effects: true,
+            effects: false,
             smoothTouch: 0.1,
             normalizeScroll: false,
             ignoreMobileResize: true,

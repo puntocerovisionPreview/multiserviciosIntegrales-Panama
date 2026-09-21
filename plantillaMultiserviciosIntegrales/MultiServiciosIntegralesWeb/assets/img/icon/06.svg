@@ -1,0 +1,11 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 3 Layered Technical Division Cubes -->
+  <!-- Top Layer (Division A) -->
+  <path d="M35 8L58 20L35 32L12 20L35 8Z" fill="#d92525"/>
+  <!-- Middle Layer (Division B) -->
+  <path d="M12 28L35 40L58 28" stroke="#d92525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bottom Layer (Division C) -->
+  <path d="M12 38L35 50L58 38" stroke="#d92525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Base pillar -->
+  <path d="M12 48L35 60L58 48" stroke="#d92525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
