@@ -314,35 +314,178 @@
             color: #ffffff !important;
         }
 
-        /* ===== Floating WhatsApp Button ===== */
-        .floating-whatsapp-btn {
+        /* ===== Floating Contact Action Buttons (WhatsApp & Email) ===== */
+        .floating-contact-group {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
-            color: #fff !important;
-            border-radius: 50px;
-            padding: 12px 22px 12px 18px;
             display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px;
-            font-weight: 700;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
             z-index: 9998;
-            transition: all 0.3s ease;
+        }
+
+        .floating-email-btn {
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            color: #ffffff !important;
+            border-radius: 50px;
+            padding: 10px 20px;
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.45);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+        }
+
+        .floating-email-btn i {
+            font-size: 20px;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+        }
+
+        .floating-email-btn:hover {
+            background: linear-gradient(135deg, #b71c1c, #8e0000);
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.65);
+            color: #ffffff !important;
+        }
+
+        .floating-whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #1ebe5d);
+            color: #ffffff !important;
+            border-radius: 50px;
+            padding: 14px 24px 14px 20px;
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            animation: wa-pulse 2.5s infinite;
+        }
+
+        @keyframes wa-pulse {
+            0% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55), 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+            70% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55), 0 0 0 14px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55), 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
 
         .floating-whatsapp-btn i {
-            font-size: 24px;
+            font-size: 26px;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
         }
 
         .floating-whatsapp-btn:hover {
-            background-color: #20BA56;
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-            color: #fff !important;
+            background: linear-gradient(135deg, #20BA56, #169b47);
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+            color: #ffffff !important;
+        }
+
+        /* ===== Header Quick Contact Shortcuts ===== */
+        .header-contact-shortcuts {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-shortcut-btn {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            border-radius: 50% !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .header-shortcut-btn.email-btn {
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            color: #ffffff !important;
+        }
+
+        .header-shortcut-btn.email-btn:hover {
+            background: linear-gradient(135deg, #b71c1c, #8e0000);
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.45);
+        }
+
+        .header-shortcut-btn.whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #1ebe5d);
+            color: #ffffff !important;
+        }
+
+        .header-shortcut-btn.whatsapp-btn:hover {
+            background: linear-gradient(135deg, #20BA56, #169b47);
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== Offcanvas Sidebar Direct Contact Enhancement ===== */
+        .offcanvas__wrapper .social-icon {
+            gap: 14px;
+        }
+
+        .offcanvas__wrapper .social-icon a {
+            width: 50px !important;
+            height: 50px !important;
+            line-height: 50px !important;
+            font-size: 22px !important;
+            border-radius: 50% !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+            border: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .offcanvas__wrapper .social-icon a.offcanvas-wa-btn {
+            background: #25D366 !important;
+            color: #ffffff !important;
+        }
+
+        .offcanvas__wrapper .social-icon a.offcanvas-wa-btn:hover {
+            background: #20BA56 !important;
+            transform: translateY(-2px) scale(1.08) !important;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45) !important;
+        }
+
+        .offcanvas__wrapper .social-icon a.offcanvas-mail-btn {
+            background: #d32f2f !important;
+            color: #ffffff !important;
+        }
+
+        .offcanvas__wrapper .social-icon a.offcanvas-mail-btn:hover {
+            background: #b71c1c !important;
+            transform: translateY(-2px) scale(1.08) !important;
+            box-shadow: 0 6px 18px rgba(211, 47, 47, 0.45) !important;
         }
 
         /* ===== Big Brand Slider – Active Slide Zoom Effect ===== */
@@ -390,11 +533,20 @@
                 margin-top: 10px;
             }
 
-            .floating-whatsapp-btn {
+            .floating-contact-group {
                 bottom: 20px;
                 right: 20px;
-                padding: 12px 16px;
-                font-size: 14px;
+                gap: 10px;
+            }
+
+            .floating-whatsapp-btn {
+                padding: 12px 18px;
+                font-size: 15px;
+            }
+
+            .floating-email-btn {
+                padding: 8px 16px;
+                font-size: 13px;
             }
 
             .section-title h2 br,
@@ -423,13 +575,69 @@
                 font-size: 15px !important;
             }
 
-            .floating-whatsapp-btn span {
+            .floating-whatsapp-btn span,
+            .floating-email-btn span {
                 display: none;
             }
 
             .floating-whatsapp-btn {
-                padding: 14px;
-                border-radius: 50%;
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                min-height: 52px;
+                padding: 0 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+            }
+
+            .floating-email-btn {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                min-height: 48px;
+                padding: 0 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+            }
+        }
+
+        /* ===== Footer Celular & WhatsApp Badge Mobile Stability ===== */
+        .footer-cel-line {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .footer-cel-line a {
+            white-space: nowrap;
+        }
+
+        /* ===== Sectores Card Box Fluid Layout ===== */
+        .sector-card-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        /* ===== Project Title Long Text Legibility & Responsive Wrapping ===== */
+        .project-card-title {
+            font-size: 1.02rem !important;
+            font-weight: 700 !important;
+            line-height: 1.45 !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+
+        @media (max-width: 767px) {
+            .project-card-title {
+                font-size: 0.95rem !important;
+                line-height: 1.35 !important;
             }
         }
 
@@ -441,6 +649,8 @@
         .theme-btn,
         .project-filter-btn,
         .floating-whatsapp-btn,
+        .floating-email-btn,
+        .header-shortcut-btn,
         .back-to-top,
         .badge,
         .project-thumb-btn,
@@ -607,3 +817,17 @@
             border-radius: 8px !important;
             margin: 2px 0 !important;
         }
+
+        /* ===== Ajuste Responsivo para Cifras en el Counter ===== */
+        .feature-counter-wrapper-inner .feature-box-items h2 {
+            font-size: clamp(34px, 3.2vw, 54px) !important;
+            white-space: nowrap !important;
+            line-height: 1.15 !important;
+        }
+        @media (max-width: 767px) {
+            .feature-counter-wrapper-inner .feature-box-items h2 {
+                font-size: 38px !important;
+                white-space: normal !important;
+            }
+        }
+
